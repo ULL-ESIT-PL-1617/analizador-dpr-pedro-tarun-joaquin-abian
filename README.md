@@ -1,38 +1,58 @@
-# Solución a la Práctica Evaluar Analizador Descendente Predictivo Recursivo
+# Analizador DPR
 
-* [Campus PL1617: Práctica: Evaluar Analizador Descendente Predictivo Recursivo](https://campusvirtual.ull.es/1617/mod/assign/view.php?id=195888)
-* [Descripción de la Práctica: Analizador Descendente Predictivo Recursivo](http://crguezl.github.io/pl-html/node26.html)
-* [Analizadores Descendentes Recursivos](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/apuntes/parsing/recursivodescendente/)
+* [Repositorio Github](https://github.com/ULL-ESIT-PL-1617/analizador-dpr-pedro-tarun-joaquin-abian)
+* [Despliegue en Gh-Pages](https://ull-esit-pl-1617.github.io/analizador-dpr-pedro-tarun-joaquin-abian/)
 
-## Definición de la Práctica
+---
 
-### Forma de trabajo
+# Participantes
 
-* Use su portátil o su cuenta en c9 para llevar a cabo los objetivos planteados.
-* Esta práctica se divide en objetivos o hitos:  indique al profesor  cuando ha terminado y suba los enlaces a los repos y despliegues.
+| Nombre | Correo Electrónico | Página personal Github |
+| --- | --- | --- |
+| Abián Torres Torres | alu0100887686@ull.edu.es | [alu0100887686](https://alu0100887686.github.io/) |
+| Tarun Mohandas Daryanani | alu0100891782@ull.edu.es | [alu0100891782](https://alu0100891782.github.io/) |
+| Pedro Miguel Lagüera Cabrera | alu0100891485@ull.edu.es | [plaguera](https://plaguera.github.io/) |
+| Joaquín Sanchiz Navarro | alu0100893755@ull.edu.es | [joaquinsanchiz](https://joaquinsanchiz.github.io/) |
 
-### Descripción del Código de la Práctica
+---
 
-1. [Eloquent JS: The Secret Life of Objects. Lying Out a Table](http://eloquentjavascript.net/06_object.html##h_36C2FHHi44)
-2. [Repo original de esta práctica](https://github.com/ULL-ESIT-DSI-1617/oop-eloquentjs-example)
+## [Descripción de la Práctica](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicarecdescparser.html)
 
-### Hitos
+Diseñe un lenguaje de programación sencillo. Escriba un analizador sintáctico que genere un árbol de análisis abstracto para dicho lenguaje. [/scripts](/scripts).
 
-1. Use el repo de GitHub dado por la asignación de esta tarea. 
-2. Separe las clases `UnderlinedCell`, `TexCell`, etc. en distintos ficheros exportando los objetos adecuados
-3. Reescriba las clases usando ECMA6
-4. Añada pruebas para cada una de las clases `UnderlinedCell`, `TexCell`, etc
-5. Añada integración continua usando Travis
-6. Añada a su `README.md` un badge Travis como este:
-[![Build Status](https://travis-ci.org/crguezl/mocha-chai-sinon--example.svg?branch=travis)](https://travis-ci.org/crguezl/mocha-chai-sinon--example)
-indicando el estado de las pruebas en Travis y enlazando a las mismas. 
-7. Entrege los enlaces al repo en GitHub y a Travis
+---
 
+## [Página de la Asignatura](https://campusvirtual.ull.es/1617/course/view.php?id=1148)
 
-### Recursos
+---
 
-* [Apuntes: Programación Orientada a Objetos](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/apuntes/oop/)
-* [Apuntes: Pruebas. Mocha](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/apuntes/pruebas/mocha.html)
-* [Apuntes: Pruebas. Should](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/apuntes/pruebas/mocha.html#shouldl)
-* [Apuntes: Integración Contínua. Travis](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/apuntes/pruebas/travis.html)
-* [node-sass-middleware](https://github.com/sass/node-sass-middleware/blob/master/README.md)
+### Despliegues en el IaaS
+
+| Nombre | Dirección IP:Puerto |
+| --- | --- |
+| Abián Torres Torres | <http://10.6.128.34:8081/> |
+| Tarun Mohandas Daryanani | <http://10.6.128.236:8081/> |
+| Pedro Miguel Lagüera Cabrera | <http://10.6.128.101:8081/> |
+| Joaquín Sanchíz Navarro  | <http://10.6.129.240:8081/> |
+
+---
+
+### Despliegue en Gitbook
+
+| Nombre | Dirección Gitbook |
+| --- | --- |
+| Abián Torres Torres | [alu0100887686/estudiar-las-rutas-en-expressjs-tpka](https://alu0100887686.gitbooks.io/analizador-dpr/content/) |
+| Tarun Mohandas Daryanani | [alu0100891782/estudiar-las-rutas-en-expressjs-tpka](https://alu0100891782.gitbooks.io/analizador-dpr/content/) |
+| Pedro Miguel Lagüera Cabrera | [plaguera/estudiar-las-rutas-en-expressjs-tpka](https://plaguera.gitbooks.io/analizador-dpr/content/) |
+| Joaquín Sanchíz Navarro | [joaquinsanchiz/estudiar-las-rutas-en-expressjs-tpka](https://joaquinsanchiz.gitbooks.io/analizador-dpr/content/) |
+
+---
+
+### Despliegue en Heroku
+
+| Nombre | Dirección Heroku |
+| --- | --- |
+| Abián Torres Torres | [Abián Heroku](https://analizador-dpr-abian.herokuapp.com/) |
+| Tarun Mohandas Daryanani | [Tarun Heroku](https://analizador-dpr-tarun.herokuapp.com/) |
+| Pedro Miguel Lagüera Cabrera | [Pedro Heroku](https://analizador-dpr-pedro.herokuapp.com/) |
+| Joaquín Sanchíz Navarro | [Joaquín Heroku](https://analizador-dpr-joaquin.herokuapp.com/) |
