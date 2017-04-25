@@ -32,11 +32,11 @@ Reglas de Producción:
 
  Ejemplo de uso de funciones:
 
-*  a = FUNCTION (c) {
-*       b = 2 + 1;
-*       c = 9
-*  };
-*  a(8)
+a = FUNCTION (c) {
+ b = 2 + 1;
+ c = 9
+};
+a(8)
  
 [
  {
