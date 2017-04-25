@@ -29,6 +29,78 @@ Reglas de Producción:
 4. expression = term ADDOP term
 5. term       = factor (* term)?
 6. factor     = NUM | ID | (expression)
+
+** Ejemplo de uso de funciones:
+
+* a = FUNCTION (c) {
+*       b = 2 + 1;
+*       c = 9
+* };
+* a(8)
+ 
+ [
+  {
+    "type": "=",
+    "left": {
+      "type": "ID",
+      "value": "a"
+    },
+    "right": {
+      "type": "FUNCTION",
+      "parameters": [
+        {
+          "type": "ID",
+          "value": "c"
+        }
+      ],
+      "value": [
+        {
+          "type": "=",
+          "left": {
+            "type": "ID",
+            "value": "b"
+          },
+          "right": {
+            "type": "+",
+            "left": {
+              "type": "NUM",
+              "value": 2
+            },
+            "right": {
+              "type": "NUM",
+              "value": 1
+            }
+          }
+        },
+        {
+          "type": "=",
+          "left": {
+            "type": "ID",
+            "value": "c"
+          },
+          "right": {
+            "type": "NUM",
+            "value": 9
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "FUNCTION CALL",
+    "left": {
+      "type": "ID",
+      "value": "a"
+    },
+    "right": [
+      {
+        "type": "NUM",
+        "value": 8
+      }
+    ]
+  }
+]
+
 ---
 
 ## [Página de la Asignatura](https://campusvirtual.ull.es/1617/course/view.php?id=1148)
