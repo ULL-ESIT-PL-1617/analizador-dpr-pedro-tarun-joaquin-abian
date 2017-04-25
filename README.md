@@ -23,100 +23,102 @@ WHILE, THEN, IF, ELSE, FUNCTION, P
 V = statement, condition, statements, expression, condition, term, factor
 
 Reglas de Producción:
-1. statements = (statement)*
-2. statement  = (CONST ID = expression | ID (statement*)?| FUNCTION ((statement|,)*) ({statements})?| P expression | IF (condition) THEN statement| WHILE (condition) THEN statement| expression);
-3. condition  = expression COMPARISON expression
-4. expression = term ADDOP term
-5. term       = factor (* term)?
-6. factor     = NUM | ID | (expression)
+  1. statements = (statement)*
+  2. statement  = (CONST ID = expression | ID (statement*)?| FUNCTION ((statement|,)*) ({statements})?| P expression | IF (condition) THEN statement| WHILE (condition) THEN statement| expression);
+  3. condition  = expression COMPARISON expression
+  4. expression = term ADDOP term
+  5. term       = factor (* term)?
+  6. factor     = NUM | ID | (expression)
+  
+- NOTA: NO USAR ';' EN LA ÚLTIMA LÍNEA DE CADA ENTORNO
 
 * Ejemplo de uso de funciones:
 
-a = FUNCTION (c) {
- b = 2 + 1;
- c = 9
-};
-a(8)
+   a = FUNCTION (c) {
+    b = 2 + 1;
+    c = 9
+   };
+   a(8)
 
 
-[
-  {
-    "type": "=",
-    "left": {
-      "type": "ID",
-      "value": "a"
-    },
-    "right": {
-      "type": "FUNCTION",
-      "parameters": [
-        {
-          "type": "ID",
-          "value": "c"
-        }
-      ],
-      "value": [
-        {
-          "type": "=",
-          "left": {
-            "type": "ID",
-            "value": "b"
-          },
-          "right": {
-            "type": "+",
-            "left": {
-              "type": "NUM",
-              "value": 2
-            },
-            "right": {
-              "type": "NUM",
-              "value": 1
-            }
-          }
-        },
-        {
-          "type": "=",
-          "left": {
-            "type": "ID",
-            "value": "c"
-          },
-          "right": {
-            "type": "NUM",
-            "value": 9
-          }
-        }
-      ]
-    }
-  },
-  {
-    "type": "FUNCTION CALL",
-    "left": {
-      "type": "ID",
-      "value": "a"
-    },
-    "right": [
-      {
-        "type": "NUM",
-        "value": 8
-      }
-    ]
-  }
- ] 
+   [
+     {
+       "type": "=",
+       "left": {
+         "type": "ID",
+         "value": "a"
+       },
+       "right": {
+         "type": "FUNCTION",
+         "parameters": [
+           {
+             "type": "ID",
+             "value": "c"
+           }
+         ],
+         "value": [
+           {
+             "type": "=",
+             "left": {
+               "type": "ID",
+               "value": "b"
+             },
+             "right": {
+               "type": "+",
+               "left": {
+                 "type": "NUM",
+                 "value": 2
+               },
+               "right": {
+                 "type": "NUM",
+                 "value": 1
+               }
+             }
+           },
+           {
+             "type": "=",
+             "left": {
+               "type": "ID",
+               "value": "c"
+             },
+             "right": {
+               "type": "NUM",
+               "value": 9
+             }
+           }
+         ]
+       }
+     },
+     {
+       "type": "FUNCTION CALL",
+       "left": {
+         "type": "ID",
+         "value": "a"
+       },
+       "right": [
+         {
+           "type": "NUM",
+           "value": 8
+         }
+       ]
+     }
+    ] 
 
 * Ejemplo de uso de constantes:
 
-CONST x = 2 ;
+   CONST x = 2 ;
 
-{
-  "type": "=",
-  "left": {
-    "type": "CONST",
-    "value": "x"
-  },
-  "right": {
-    "type": "NUM",
-    "value": 2
-  }
-}
+   {
+     "type": "=",
+     "left": {
+       "type": "CONST",
+       "value": "x"
+     },
+     "right": {
+       "type": "NUM",
+       "value": 2
+     }
+   }
 
 ---
 
