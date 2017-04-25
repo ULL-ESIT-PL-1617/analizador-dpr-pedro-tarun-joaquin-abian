@@ -30,7 +30,7 @@ Reglas de Producción:
 5. term       = factor (* term)?
 6. factor     = NUM | ID | (expression)
 
-** Ejemplo de uso de funciones:
+* Ejemplo de uso de funciones:
 
 a = FUNCTION (c) {
  b = 2 + 1;
@@ -102,7 +102,7 @@ a(8)
   }
  ] 
 
-** Ejemplo de uso de constantes:
+* Ejemplo de uso de constantes:
 
 CONST x = 2 ;
 
