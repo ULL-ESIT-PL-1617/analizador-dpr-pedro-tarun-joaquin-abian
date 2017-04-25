@@ -30,16 +30,17 @@ Reglas de Producción:
 5. term       = factor (* term)?
 6. factor     = NUM | ID | (expression)
 
- Ejemplo de uso de funciones:
+** Ejemplo de uso de funciones:
 
 a = FUNCTION (c) {
  b = 2 + 1;
  c = 9
 };
 a(8)
- 
+
+
 [
- {
+  {
     "type": "=",
     "left": {
       "type": "ID",
@@ -99,7 +100,23 @@ a(8)
       }
     ]
   }
-]
+ ] 
+
+** Ejemplo de uso de constantes:
+
+CONST x = 2 ;
+
+{
+  "type": "=",
+  "left": {
+    "type": "CONST",
+    "value": "x"
+  },
+  "right": {
+    "type": "NUM",
+    "value": 2
+  }
+}
 
 ---
 
