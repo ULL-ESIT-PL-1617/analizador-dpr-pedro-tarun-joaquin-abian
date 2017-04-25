@@ -19,7 +19,9 @@
 
 Σ = WHITES, ADDOP, MULOP, NUM, ID, STRING, COMPARISONOPERATOR, ONELINECOMMENT, MULTIPLELINECOMMENT, ONECHAROPERATORS, 
 WHILE, THEN, IF, ELSE, FUNCTION, P 
+
 V = statement, condition, statements, expression, condition, term, factor
+
 Reglas de Producción:
 1. statements = (statement)*
 2. statement  = (CONST ID = expression | ID (statement*)?| FUNCTION ((statement|,)*) ({statements})?| P expression | IF (condition) THEN statement| WHILE (condition) THEN statement| expression);
