@@ -17,8 +17,16 @@
 
 ## [Descripción de la Práctica](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicarecdescparser.html)
 
-Diseñe un lenguaje de programación sencillo. Escriba un analizador sintáctico que genere un árbol de análisis abstracto para dicho lenguaje. [/scripts](/scripts).
-
+Σ = WHITES, ADDOP, MULOP, NUM, ID, STRING, COMPARISONOPERATOR, ONELINECOMMENT, MULTIPLELINECOMMENT, ONECHAROPERATORS, 
+WHILE, THEN, IF, ELSE, FUNCTION, P 
+V = statement, condition, statements, expression, condition, term, factor
+Reglas de Producción:
+1. statements = (statement)*
+2. statement  = (CONST ID = expression | ID (statement*)?| FUNCTION ((statement|,)*) ({statements})?| P expression | IF (condition) THEN statement| WHILE (condition) THEN statement| expression);
+3. condition  = expression COMPARISON expression
+4. expression = term ADDOP term
+5. term       = factor (* term)?
+6. factor     = NUM | ID | (expression)
 ---
 
 ## [Página de la Asignatura](https://campusvirtual.ull.es/1617/course/view.php?id=1148)
@@ -27,9 +35,7 @@ Diseñe un lenguaje de programación sencillo. Escriba un analizador sintáctico
 
 ### Despliegue en Heroku
 
-| Nombre | Dirección Heroku |
-| --- | --- |
-| Abián Torres Torres | [Abián Heroku](https://analizador-dpr-abian.herokuapp.com/) |
-| Tarun Mohandas Daryanani | [Tarun Heroku](https://analizador-dpr-tarun.herokuapp.com/) |
-| Pedro Miguel Lagüera Cabrera | [Pedro Heroku](https://analizador-dpr-pedro.herokuapp.com/) |
-| Joaquín Sanchíz Navarro | [Joaquín Heroku](https://analizador-dpr-joaquin.herokuapp.com/) |
+| Dirección Heroku |
+| ---  |
+|  [Aplicación](https://blooming-temple-32843.herokuapp.com/) |
+
