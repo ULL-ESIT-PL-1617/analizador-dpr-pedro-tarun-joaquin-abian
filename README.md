@@ -158,6 +158,7 @@ Reglas de Producción:
     
 * Ejemplo de uso de condicionales:
   IF a==b THEN a = a+1
+    
   {
   "type": "IF",
   "left": {
