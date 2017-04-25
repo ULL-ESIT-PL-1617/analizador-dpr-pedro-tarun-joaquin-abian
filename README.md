@@ -120,21 +120,55 @@ Reglas de Producción:
      }
    }
 
- * Ejemplo de uso de bucles:
+* Ejemplo de uso de bucles:
+    WHILE 1==1 THEN a = 1+2
  
- WHILE 1==1 THEN a = 1+2
- 
- {
-  "type": "WHILE",
+     {
+      "type": "WHILE",
+      "left": {
+        "type": "==",
+        "left": {
+          "type": "NUM",
+          "value": 1
+        },
+        "right": {
+          "type": "NUM",
+          "value": 1
+        }
+      },
+      "right": {
+        "type": "=",
+        "left": {
+          "type": "ID",
+          "value": "a"
+        },
+        "right": {
+          "type": "+",
+          "left": {
+            "type": "NUM",
+            "value": 1
+          },
+          "right": {
+            "type": "NUM",
+            "value": 2
+          }
+        }
+      }
+    }
+    
+* Ejemplo de uso de condicionales:
+  IF a==b THEN a = a+1
+  {
+  "type": "IF",
   "left": {
     "type": "==",
     "left": {
-      "type": "NUM",
-      "value": 1
+      "type": "ID",
+      "value": "a"
     },
     "right": {
-      "type": "NUM",
-      "value": 1
+      "type": "ID",
+      "value": "b"
     }
   },
   "right": {
@@ -146,17 +180,16 @@ Reglas de Producción:
     "right": {
       "type": "+",
       "left": {
-        "type": "NUM",
-        "value": 1
+        "type": "ID",
+        "value": "a"
       },
       "right": {
         "type": "NUM",
-        "value": 2
+        "value": 1
       }
     }
   }
 }
-
 ---
 
 ## [Página de la Asignatura](https://campusvirtual.ull.es/1617/course/view.php?id=1148)
